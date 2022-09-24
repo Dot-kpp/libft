@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../headers/libft.h"
 
 void	ft_putchar(char c, int *len)
 {
@@ -56,14 +56,4 @@ void	ft_putstr(char *s, int *base_len)
 		ft_putchar(s[i], base_len);
 		i++;
 	}
-}
-
-size_t	ft_strlen(char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
 }

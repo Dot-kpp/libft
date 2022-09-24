@@ -49,7 +49,6 @@ void	ft_putnbr_base_unsigned_int(unsigned int n, char *base, int *len);
 void	ft_putnbr_base_unsigned_long(unsigned long n, char *base, int *len);
 void	ft_putnbr_u(unsigned int n, int *base_len);
 void	ft_putstr(char *s, int *base_len);
-size_t	ft_strlen(char *str);
 
 
 size_t	ft_strlen(const char *str);

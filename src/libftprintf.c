@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../headers/libft.h"
 
 void	get_format(char const *str, va_list arg, int index, int *arg_len)
 {
