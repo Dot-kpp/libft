@@ -17,12 +17,40 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+# include <stdarg.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }				t_list;
+
+
+//GNL
+char	*get_next_line(int fd);
+
+//Printf
+int		ft_printf(const char *format, ...);
+void	get_format(char const *str, va_list arg, int index, int *arg_len);
+void	ft_print_char(va_list arg, int *arg_len);
+void	ft_print_int(va_list arg, int *arg_len);
+void	ft_print_usigned_int(va_list arg, int *arg_len);
+void	ft_print_hex(va_list arg, int *arg_len, char c);
+void	ft_print_hex_address(va_list arg, int *arg_len);
+void	ft_print_str(va_list arg, int *arg_len);
+void	ft_putchar(char c, int *len);
+void	ft_putnbr(int n, int *len);
+void	ft_putnbr_base(int n, char *base, int *len);
+void	ft_putnbr_base_unsigned_int(unsigned int n, char *base, int *len);
+void	ft_putnbr_base_unsigned_long(unsigned long n, char *base, int *len);
+void	ft_putnbr_u(unsigned int n, int *base_len);
+void	ft_putstr(char *s, int *base_len);
+size_t	ft_strlen(char *str);
+
 
 size_t	ft_strlen(const char *str);
 int		ft_isprint(int c);
